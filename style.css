@@ -1,0 +1,172 @@
+* {
+  font-family: "Poppins", serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Container: Provides padding */
+.container {
+  padding: 0.5rem;
+}
+
+/* Editor area setup*/
+.editor {
+  background-color: black;
+  min-height: 100vh;
+}
+
+/* Title styling*/
+.container h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  padding: 0.2rem;
+}
+
+/* Font Awesome icon sizing*/
+.fa-brands {
+  font-size: 2.2rem;
+}
+
+/* Individual icon color styling */
+.fa-html5 {
+  color: red;
+}
+.fa-css3 {
+  color: skyblue;
+}
+.fa-js {
+  color: yellow;
+}
+
+/* Input area layout*/
+.input-area {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem;
+}
+
+/* Textarea setup*/
+#html-markup,
+#css-style,
+#js-script {
+  height: 32vh; /* Height based on viewport height */
+  width: 28vw; /* Width based on viewport width */
+  padding: 0.5rem;
+  font-size: 1.2rem; /* Larger font size for better readability */
+}
+
+/* Label styling*/
+label {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Output area layout*/
+.output-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem; /* Space at the bottom */
+}
+
+/* Output iframe setup*/
+.output-area iframe {
+  background-color: white;
+  color: white;
+  margin-top: 2rem; /* Space from top */
+  padding: 1rem;
+  font-size: 1.2rem;
+  width: 40rem;
+  height: 18rem;
+  border: 0.2rem solid black;
+}
+
+/* Play icon (FontAwesome) styling */
+.fa-play {
+  height: 2.2rem;
+  color: white;
+}
+
+/* Button styles*/
+.btn {
+  margin-top: 0.3rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: black;
+  border: 0.2rem solid transparent;
+  border-radius: 1.2rem;
+  cursor: pointer;
+}
+
+/* Button hover effect*/
+.btn:hover {
+  background-color: greenyellow;
+  transform: scale3d(1.1, 1.1, 1);
+  transition: 0.3s ease-in-out;
+}
+
+/* Media queries for responsiveness */
+
+/* For screens smaller than 1280px:*/
+@media (max-width: 1280px) {
+  .input-area {
+    flex-wrap: wrap;
+  }
+
+  .output-area {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  /* Adjust textarea sizes for smaller screens */
+  #html-markup,
+  #css-style,
+  #js-script {
+    height: 50vh;
+    width: 40vw;
+  }
+
+  /* Ensure iframe doesn't exceed screen size */
+  .output-area iframe {
+    max-width: 80vw;
+  }
+
+  #output-btn {
+    margin-top: 5rem;
+  }
+}
+
+/* For screens smaller than 915px*/
+@media (max-width: 915px) {
+  /* Smaller font size for the heading */
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  /* Add extra space between laable*/
+  label {
+    margin-top: 1.5rem;
+  }
+
+  /* Adjust textareea sizes for even smaller screens */
+  #html-markup,
+  #css-style,
+  #js-script {
+    height: 40vh;
+    width: 70vw;
+  }
+
+  /*iframe adjusts to smaller screen*/
+  .output-area iframe {
+    max-width: 80vw;
+  }
+}
