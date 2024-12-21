@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Editor</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Setting the favicon  -->
+    <link rel="shortcut icon" href="image/code.favicon.png" />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome CDN for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!-- Main container -->
+    <div class="container">
+      <!-- Page title-->
+      <h1>Code Editor <i class="fa-brands fa-codepen"></i></h1>
+
+      <!-- users can write their HTML, CSS, and JavaScript -->
+      <div class="editor">
+        <!-- HTML code -->
+        <div class="input-area">
+          <!-- HTML input field -->
+          <label>
+            <i class="fa-brands fa-html5"></i>
+            <textarea id="html-markup" placeholder="write html here"></textarea>
+            <button class="btn" id="html-btn">Clear HTML</button>
+          </label>
+
+          <!-- CSS input field -->
+          <label>
+            <i class="fa-brands fa-css3"></i>
+            <textarea id="css-style" placeholder="Write css here"></textarea>
+            <button class="btn" id="css-btn">Clear CSS</button>
+          </label>
+
+          <!-- JavaScript input field-->
+          <label>
+            <i class="fa-brands fa-js"></i>
+            <textarea
+              id="js-script"
+              placeholder="Write javascript here"
+            ></textarea>
+            <button class="btn" id="js-btn">Clear jS</button>
+          </label>
+        </div>
+
+        <!-- Output area -->
+        <div class="output-area">
+          <!-- Button to clear the output -->
+          <button class="btn" id="output-btn">Clear Output</button>
+
+          <!-- iframe where the output will be shown -->
+          <label>
+            <iframe id="output-display"></iframe>
+          </label>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
